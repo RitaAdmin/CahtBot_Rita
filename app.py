@@ -36,6 +36,7 @@ def obter_resposta(texto: str) -> str:
          'gostas de animais?': 'sim',
          'qual o teu animal preferido?': 'adoro caes',
          'qual o teu filme preferido?':' up-altamente',
+         'qual é a sua estação do ano preferida ':'Primavera',
          ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
     }
     for chave, resposta in respostas.items():
