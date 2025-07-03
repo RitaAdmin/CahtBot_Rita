@@ -28,25 +28,24 @@ def obter_resposta(texto: str) -> str:
         ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
          'como estás': 'Estou bem, obrigado!',
          'como te chamas?':'Sou o Bot :)',
-         'gostas de ouvri música?':'Sim, adoro ouvir música'
-         'qual a tua musica favorita?':'Demons de Imagine Dragons'
-         'conheces mais alguma musica dessa banda': 'Outra musica que adoro ouvir dessa banda é radioactive'
-         'qual a tua cor favorita?': 'Gosto da cor roxo'
-         'quem foi que te criou?': 'uma mente curiosa e sem nada para fazer nos tempos livres'
-         'gostas de animais?': 'sim'
-         'qual o teu animal preferido?': 'adoro caes'
-         'qual o teu filme preferido?':' up-altamente'
+         'gostas de ouvri música?':'Sim, adoro ouvir música',
+         'qual a tua musica favorita?':'Demons de Imagine Dragons',
+         'conheces mais alguma musica dessa banda': 'Outra musica que adoro ouvir dessa banda é radioactive',
+         'qual a tua cor favorita?': 'Gosto da cor roxo',
+         'quem foi que te criou?': 'uma mente curiosa e sem nada para fazer nos tempos livres',
+         'gostas de animais?': 'sim',
+         'qual o teu animal preferido?': 'adoro caes',
+         'qual o teu filme preferido?':' up-altamente',
          ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
-     }
-
-for chave, resposta in respostas.items():
+    }
+    for chave, resposta in respostas.items():
         if isinstance(chave, tuple):
             if comando in chave:
-                 return resposta
+                return resposta
             elif chave in comando:
-            return resposta
+                return resposta
 
-    return f'Desculpa, não entendi a questão! {texto}'
+        return f'Desculpa, não entendi a questão! {texto}'
 
 
 def chat() -> None:
@@ -58,7 +57,7 @@ def chat() -> None:
     while True:
         user_input: str = input('Tu: ')
 
-        if resposta == 'Gostei de falar contigo! Até breve...':
+        if obter_resposta == 'Gostei de falar contigo! Até breve...':
             break
 
     print('Chat acabou')
